@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ThemeContext } from "./main"
+import { ThemeContext } from "./App"
 
 export default function Panel({title, children}){
     const theme = useContext(ThemeContext)
@@ -7,8 +7,8 @@ export default function Panel({title, children}){
     return (
         <>
             <section >
-                <h1 className={theme === 'dark' ? "text-white": "text-black" + " text-4xl"}>{title}</h1>
-                <div  className=" flex flex-col">
+                <h1 className={theme === 'dark' ? "text-white text-4xl font-bold": "text-black text-4xl font-bold"}>{title}</h1>
+                <div  className=" flex justify-around py-6">
                 {children}
                 </div>
             </section>
