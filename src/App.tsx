@@ -6,7 +6,7 @@ export const ThemeContext = createContext<string | null>(null)
 function App() {
   const [theme, setTheme] = useState('dark')
   return (
-    <div className=" flex h-lvh bg-pink-200">
+    <div className=" flex h-lvh ">
       <ThemeContext.Provider value={theme}>
         <Form handleClick={()=>{
           setTheme( theme==="dark" ? "light": "dark")
